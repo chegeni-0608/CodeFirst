@@ -16,5 +16,7 @@ namespace CodeFirstSample.Models
 
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Master> Masters { get; set; }
+        public virtual DbSet<Project> Projects { get; set; }
+        public virtual DbSet<Task> Tasks { get; set; }
     }
 }

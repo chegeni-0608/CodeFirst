@@ -15,7 +15,6 @@ namespace CodeFirstSample.Models
         public string FirstName { get; set; }
         [Required]
         [MaxLength(64)]
-
         public string LastName { get; set; }
         [MaxLength(11)]
         public string Mobile { get; set; }
