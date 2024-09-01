@@ -16,5 +16,11 @@ namespace Session06
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Models.Task task = new Models.Task();
+            Models.Project project = new Models.Project();
+        }
     }
 }

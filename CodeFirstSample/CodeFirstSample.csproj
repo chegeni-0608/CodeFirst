@@ -89,6 +89,10 @@
     <Compile Include="Migrations\202408210921157_AddTaskAndProject1.designer.cs">
       <DependentUpon>202408210921157_AddTaskAndProject1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202409010816124_UpdatProjectProperties.cs" />
+    <Compile Include="Migrations\202409010816124_UpdatProjectProperties.designer.cs">
+      <DependentUpon>202409010816124_UpdatProjectProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FadDbContext.cs" />
     <Compile Include="Models\Master.cs" />
@@ -105,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408210921157_AddTaskAndProject1.resx">
       <DependentUpon>202408210921157_AddTaskAndProject1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409010816124_UpdatProjectProperties.resx">
+      <DependentUpon>202409010816124_UpdatProjectProperties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -18,5 +18,18 @@ namespace CodeFirstSample.Models
         public virtual DbSet<Master> Masters { get; set; }
         public virtual DbSet<Project> Projects { get; set; }
         public virtual DbSet<Task> Tasks { get; set; }
+
+        //Fluent API
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Project>()
+                .Property(p => p.ProjectName)
+                .IsRequired().HasMaxLength(128);
+
+            modelBuilder.Entity<Project>()
+                .Property(p => p.Description)
+                .IsOptional().HasMaxLength(1024);
+
+        }
     }
 }
