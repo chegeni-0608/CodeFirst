@@ -80,6 +80,21 @@ namespace CodeFirstSample
                 int totalRecordCount = parameters.Get<int>("totalItemCount");
             }
         }
+
+        private void btnMultiSelectQueryWithDapper_Click(object sender, EventArgs e)
+        {
+            using (IDbConnection connection = new SqlConnection(connectionstring))
+            {
+                string command = "select * from Categories; select * from Products";
+                var result = connection.QueryMultiple(command);
+
+                //get categories
+                var categories = result.Read<CategoryViewModel>();
+                var products = result.Read<ProductViewModel>();
+
+
+            }
+        }
     }
 } 
 

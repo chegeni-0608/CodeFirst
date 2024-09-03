@@ -33,6 +33,7 @@
             this.btnSelectWithDapper = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSelectWithDapperSP = new System.Windows.Forms.Button();
+            this.btnMultiSelectQueryWithDapper = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             // 
             this.btnInsertWithDapper.Location = new System.Drawing.Point(28, 12);
             this.btnInsertWithDapper.Name = "btnInsertWithDapper";
-            this.btnInsertWithDapper.Size = new System.Drawing.Size(162, 23);
+            this.btnInsertWithDapper.Size = new System.Drawing.Size(176, 23);
             this.btnInsertWithDapper.TabIndex = 0;
             this.btnInsertWithDapper.Text = "Insert With Dapper";
             this.btnInsertWithDapper.UseVisualStyleBackColor = true;
@@ -50,7 +51,7 @@
             // 
             this.btnIsertWithdapperSp.Location = new System.Drawing.Point(28, 50);
             this.btnIsertWithdapperSp.Name = "btnIsertWithdapperSp";
-            this.btnIsertWithdapperSp.Size = new System.Drawing.Size(162, 23);
+            this.btnIsertWithdapperSp.Size = new System.Drawing.Size(176, 23);
             this.btnIsertWithdapperSp.TabIndex = 1;
             this.btnIsertWithdapperSp.Text = "Insert With Dapper - SP ";
             this.btnIsertWithdapperSp.UseVisualStyleBackColor = true;
@@ -60,7 +61,7 @@
             // 
             this.btnSelectWithDapper.Location = new System.Drawing.Point(28, 90);
             this.btnSelectWithDapper.Name = "btnSelectWithDapper";
-            this.btnSelectWithDapper.Size = new System.Drawing.Size(162, 23);
+            this.btnSelectWithDapper.Size = new System.Drawing.Size(176, 23);
             this.btnSelectWithDapper.TabIndex = 2;
             this.btnSelectWithDapper.Text = "Select With Dapper";
             this.btnSelectWithDapper.UseVisualStyleBackColor = true;
@@ -78,17 +79,28 @@
             // 
             this.btnSelectWithDapperSP.Location = new System.Drawing.Point(28, 132);
             this.btnSelectWithDapperSP.Name = "btnSelectWithDapperSP";
-            this.btnSelectWithDapperSP.Size = new System.Drawing.Size(162, 23);
+            this.btnSelectWithDapperSP.Size = new System.Drawing.Size(176, 23);
             this.btnSelectWithDapperSP.TabIndex = 4;
             this.btnSelectWithDapperSP.Text = "Select With Dapper -Sp";
             this.btnSelectWithDapperSP.UseVisualStyleBackColor = true;
             this.btnSelectWithDapperSP.Click += new System.EventHandler(this.btnSelectWithDapperSP_Click);
+            // 
+            // btnMultiSelectQueryWithDapper
+            // 
+            this.btnMultiSelectQueryWithDapper.Location = new System.Drawing.Point(28, 174);
+            this.btnMultiSelectQueryWithDapper.Name = "btnMultiSelectQueryWithDapper";
+            this.btnMultiSelectQueryWithDapper.Size = new System.Drawing.Size(176, 23);
+            this.btnMultiSelectQueryWithDapper.TabIndex = 5;
+            this.btnMultiSelectQueryWithDapper.Text = "Multi Select Query With Dapper";
+            this.btnMultiSelectQueryWithDapper.UseVisualStyleBackColor = true;
+            this.btnMultiSelectQueryWithDapper.Click += new System.EventHandler(this.btnMultiSelectQueryWithDapper_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMultiSelectQueryWithDapper);
             this.Controls.Add(this.btnSelectWithDapperSP);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSelectWithDapper);
@@ -108,6 +120,7 @@
         private System.Windows.Forms.Button btnSelectWithDapper;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSelectWithDapperSP;
+        private System.Windows.Forms.Button btnMultiSelectQueryWithDapper;
     }
 }
 
