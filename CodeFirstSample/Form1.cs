@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CodeFirstSample.ViewModels;
 using Dapper;
 
 namespace CodeFirstSample
@@ -51,6 +52,32 @@ namespace CodeFirstSample
 
                 //read output parameter value
                 int categoryId = parameters.Get<int>("categoryId");
+            }
+        }
+
+        private void btnSelectWithDapper_Click(object sender, EventArgs e)
+        {
+            using (IDbConnection connection = new SqlConnection(connectionstring))
+            {
+                string command = "Select * from categories";
+                var result = connection.Query<CategoryViewModel>(command);
+                
+                dataGridView1.DataSource = result;
+            }
+        }
+
+        private void btnSelectWithDapperSP_Click(object sender, EventArgs e)
+        {
+            using (IDbConnection connection = new SqlConnection(connectionstring))
+            {
+                string command = "sp_GetCategories_GetAll";
+                var parameters = new DynamicParameters();
+                parameters.Add("totalItemCount", direction:ParameterDirection.Output, dbType:DbType.Int32);
+                var result = connection.Query<CategoryViewModel>(command, parameters, commandType: CommandType.StoredProcedure);
+
+                dataGridView1.DataSource = result;
+
+                int totalRecordCount = parameters.Get<int>("totalItemCount");
             }
         }
     }
